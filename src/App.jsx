@@ -6,8 +6,6 @@ import { logError } from '@edx/frontend-platform/logging';
 import { initializeHotjar } from '@edx/frontend-enterprise-hotjar';
 
 import { ErrorPage, AppContext } from '@edx/frontend-platform/react';
-import FooterSlot from '@openedx/frontend-slot-footer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Alert } from '@openedx/paragon';
 
 import { RequestKeys } from 'data/constants/requests';
@@ -93,8 +91,7 @@ export const App = () => {
               )}
           </main>
         </AppWrapper>
-        {/* <FooterSlot /> */}
-        <div class="wrapper-footer wrapper">
+        <div className="wrapper-footer wrapper">
           <footer class="primary container-fluid" role="contentinfo">
             <div class="row">
               <div class="col-sm1">
