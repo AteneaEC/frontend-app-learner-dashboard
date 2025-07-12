@@ -4,6 +4,31 @@
 @import "~@openedx/paragon/scss/core/core";
 @import "~@edx/brand/paragon/overrides";
 
+.btn-primary{
+  background-color: #3fa9f5 !important;
+  border-color: #3fa9f5 !important;
+}
+.btn-brand{
+    background-color: #3fa9f5 !important;
+    border-color: #3fa9f5 !important;
+}
+.btn-brand:hover{
+    background-color: #0c8dea !important;
+    border-color: #3fa9f5 !important;
+}
+.btn-outline-primary {
+    color: #0d6ae3;
+    background-color: #f0f3f5;
+    border-color: #0d6ae3;
+}
+.btn-outline-primary:hover {
+    color: #0c8dea;
+    background-color: #f0f3f5;
+    border-color: #0d6ae3;
+}
+$primary: #1877F2;
+$primary-400: #0d6ae3;
+
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 
@@ -66,4 +91,178 @@ $input-focus-box-shadow: $input-box-shadow; // hack to get upgrade to paragon 4.
   .confirm-modal .pgn__modal-body {
     overflow: hidden;
   }
+}
+
+
+
+.wrapper-footer {
+    /*padding: 25px 0;
+    border-top: 1px solid $gray-light;
+    @include media-breakpoint-up(md) {
+        padding: 45px 0;
+    }*/
+    border-top: 1px solid #c5c6c7;
+    clear: both;
+    box-shadow: none;
+    padding: 50px 0px;
+    background: #285B83;
+    background: -moz-linear-gradient(30deg, #285B83 50%, #2c628a 50%);
+    background: -webkit-linear-gradient(30deg, #285B83 50%, #285B83 50%);
+    background: linear-gradient(30deg, #285B83 50%, #2c628a 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#285B83', endColorstr='#2c628a',GradientType=1 );
+    position: relative;
+    width: 100%;
+    color: white;
+    footer.primary
+    {
+        width: 100%;
+        margin: 0 auto;
+        a{
+            color: white !important;
+            line-height: 1.3rem;
+        }
+    }
+    footer{
+        .row{
+            display: flex;
+            justify-content: space-evenly;
+            padding-bottom: 35px;
+        }
+    }
+    .list-unstyled{
+        list-style: none;
+        b{
+            margin-bottom: 15px;
+            display: block;
+        }
+    }
+    .social{
+        display: flex;
+        span{
+            color:#00acd7;
+        }
+        a{
+            background-color:white;
+            border-radius: 5px;
+            height: 44px;
+            width: 44px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 9px;
+            
+        }
+        svg{
+          color:#00acd7 !important;
+          fill: #00acd7;
+        }
+    }
+    .last-col{
+        p{
+            color: white;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+    }
+  .copyright {
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+footer.tutor-container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1600px;
+    text-align: center;
+    box-sizing: border-box;
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+    }
+    .footer-top {
+        margin: 0 0 15px;
+        &:after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+        .powered-area {
+            margin: 0 0 10px;
+            @include media-breakpoint-up(md) {
+                margin: 0 0 15px;
+            }
+            @include media-breakpoint-up(lg) {
+                float: left;
+            }
+        }
+    }
+    .logo-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        letter-spacing: -.3em;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 5px;
+            letter-spacing: normal;
+            position: relative;
+            font-size: 12px;
+            line-height: 18px;
+            color: #515661;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-left: 20px;
+                &:after {
+                    position: absolute;
+                    left: 5px;
+                    top: 50%;
+                    content: "";
+                    width: 1px;
+                    height: 29px;
+                    margin: -14px 0 0;
+                    background: #515661;
+                }
+            }
+        }
+    }
+    .nav-colophon {
+        display: block;
+        overflow: hidden;
+        ol {
+            text-align: center;
+            li {
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 8px;
+                font-size: 14px;
+                line-height: 20px;
+                @include media-breakpoint-up(md) {
+                    padding: 0 12px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                a {
+                    color: #515661;
+                    text-decoration: none;
+                    &:hover {
+                        color: $dark;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .copyright-site {
+        display: block;
+        font-size: 12px;
+        line-height: 16px;
+        color: #515661;
+    }
 }

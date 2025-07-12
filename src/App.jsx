@@ -7,6 +7,7 @@ import { initializeHotjar } from '@edx/frontend-enterprise-hotjar';
 
 import { ErrorPage, AppContext } from '@edx/frontend-platform/react';
 import FooterSlot from '@openedx/frontend-slot-footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Alert } from '@openedx/paragon';
 
 import { RequestKeys } from 'data/constants/requests';
@@ -28,6 +29,7 @@ import LearnerDashboardHeader from 'containers/LearnerDashboardHeader';
 import { getConfig } from '@edx/frontend-platform';
 import messages from './messages';
 import './App.scss';
+import logofoot from './logo_foot.png';
 
 export const App = () => {
   const { authenticatedUser } = React.useContext(AppContext);
@@ -91,7 +93,55 @@ export const App = () => {
               )}
           </main>
         </AppWrapper>
-        <FooterSlot />
+        {/* <FooterSlot /> */}
+        <div class="wrapper-footer wrapper">
+          <footer class="primary container-fluid" role="contentinfo">
+            <div class="row">
+              <div class="col-sm1">
+                <ul class="list-unstyled">
+                  <li><b>COMPANÍA</b></li>
+                  <li><a href="./about">Acerca de Atenea</a></li>
+                  <li><a href="https://atenea.com.ec">Equipo</a></li>
+                  <li><a href="./contact">Contacto</a></li>
+                </ul>
+              </div>
+              <div class="col-sm1 uamx_footer-middle">
+                <ul class="list-unstyled">
+                  <li><b>PRODUCTOS</b></li>
+                  <li><a href="./">Ecosistema Digital</a></li>
+                  <li><a href="./">Sector Público</a></li>
+                </ul>
+              </div>
+              <div class="col-sm1 uamx_footer-middle">
+                <ul class="list-unstyled">
+                  <li><b>LEGAL</b></li>
+                  <li><a href="./privacy">Política de privacidad</a></li>
+                  <li><a href="./tos">Términos del servicio</a></li>
+                </ul>
+              </div>
+              <div class="col-sm1 last-col">
+                <div class="footer-about-openedx">
+                  <h5>
+                    <a href="https://atenea.digital/">
+                      <img src={logofoot} alt="Atenea" width="140" />
+                    </a>
+                  </h5>
+                </div>
+                {/* <p>Aprende en nuestras redes:</p> */}
+                <div class="social-wrapper">
+                  {/* <div class="social">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="facebook"><FontAwesomeIcon icon={faFacebook} className="fa" /></a>
+                    <a href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="twitter"><FontAwesomeIcon icon={faTwitter} className="fa" /></a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="youtube"><FontAwesomeIcon icon={faYoutube} className="fa" /></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="instagram"><FontAwesomeIcon icon={faInstagram} className="fa" /></a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <p class="copyright small">© 2025 <a href="https://atenea.digital/">Atenea Lifelong Learning</a></p>
+          </footer>
+        </div>
+        
       </div>
     </>
   );
