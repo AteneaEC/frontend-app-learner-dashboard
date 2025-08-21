@@ -13,8 +13,8 @@ import { reduxHooks } from 'hooks';
 import {
   useEmailSettings,
   useUnenrollData,
-/*   useHandleToggleDropdown,
-  useOptionVisibility, */
+  // useHandleToggleDropdown,
+  useOptionVisibility,
 } from './hooks';
 /*  */
 /* import messages from './messages'; */
@@ -28,9 +28,10 @@ export const CourseCardMenu = ({ cardId }) => {
 
   const emailSettings = useEmailSettings();
   const unenrollModal = useUnenrollData();
-  //const handleToggleDropdown = useHandleToggleDropdown(cardId);
-  const { shouldShowUnenrollItem, shouldShowDropdown } = useOptionVisibility(cardId);
-  //const { isMasquerading } = reduxHooks.useMasqueradeData();
+  // const handleToggleDropdown = useHandleToggleDropdown(cardId);
+  // const { shouldShowUnenrollItem, shouldShowDropdown } = useOptionVisibility(cardId);
+  const { shouldShowDropdown } = useOptionVisibility(cardId);
+  // const { isMasquerading } = reduxHooks.useMasqueradeData();
   const { isEmailEnabled } = reduxHooks.useCardEnrollmentData(cardId);
 
   if (!shouldShowDropdown) {
