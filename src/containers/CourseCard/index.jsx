@@ -7,7 +7,7 @@ import { useIsCollapsed } from './hooks';
 import CourseCardBanners from './components/CourseCardBanners';
 import CourseCardImage from './components/CourseCardImage';
 import CourseCardMenu from './components/CourseCardMenu';
-import CourseCardActions from './components/CourseCardActions';
+/* import CourseCardActions from './components/CourseCardActions'; */
 import CourseCardDetails from './components/CourseCardDetails';
 import CourseCardTitle from './components/CourseCardTitle';
 
