@@ -9,7 +9,7 @@ import { StrictDict } from '@edx/react-unit-test-utils';
 import EmailSettingsModal from 'containers/EmailSettingsModal';
 import UnenrollConfirmModal from 'containers/UnenrollConfirmModal';
 import { reduxHooks } from 'hooks';
-import SocialShareMenu from './SocialShareMenu';
+/* import SocialShareMenu from './SocialShareMenu'; */
 import {
   useEmailSettings,
   useUnenrollData,
@@ -28,9 +28,9 @@ export const CourseCardMenu = ({ cardId }) => {
 
   const emailSettings = useEmailSettings();
   const unenrollModal = useUnenrollData();
-/*   const handleToggleDropdown = useHandleToggleDropdown(cardId);
+  //const handleToggleDropdown = useHandleToggleDropdown(cardId);
   const { shouldShowUnenrollItem, shouldShowDropdown } = useOptionVisibility(cardId);
-  const { isMasquerading } = reduxHooks.useMasqueradeData(); */
+  //const { isMasquerading } = reduxHooks.useMasqueradeData();
   const { isEmailEnabled } = reduxHooks.useCardEnrollmentData(cardId);
 
   if (!shouldShowDropdown) {
