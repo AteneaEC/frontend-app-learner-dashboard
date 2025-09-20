@@ -4,9 +4,7 @@ import { useIntl } from '@edx/frontend-platform/i18n';
 import { Card, Hyperlink, Icon } from '@openedx/paragon';
 import { ArrowForward } from '@openedx/paragon/icons';
 
-import { reduxHooks } from 'hooks';
 import moreCoursesSVG from 'assets/more-courses-sidewidget.svg';
-import { baseAppUrl } from 'data/services/lms/urls';
 
 import { findCoursesWidgetClicked } from './track';
 import messages from './messages';
@@ -16,8 +14,7 @@ export const arrowIcon = (<Icon className="mx-1" src={ArrowForward} />);
 
 export const LookingForChallengeWidget = () => {
   const { formatMessage } = useIntl();
-  const { courseSearchUrl } = reduxHooks.usePlatformSettingsData();
-  const hyperlinkDestination = 'https://cms.atenea.digital/activar-licencias/'  //  baseAppUrl(courseSearchUrl) || '';
+  const hyperlinkDestination = 'https://cms.atenea.digital/activar-licencias/';
 
   return (
     <Card orientation="horizontal" id="looking-for-challenge-widget">
@@ -42,7 +39,6 @@ export const LookingForChallengeWidget = () => {
                 <path d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8Z" fill="currentColor"></path>
               </svg>
             </span>
-            {/* {formatMessage(messages.findCoursesButton, { arrow: arrowIcon })} */}
           </Hyperlink>
         </h5>
       </Card.Body>
