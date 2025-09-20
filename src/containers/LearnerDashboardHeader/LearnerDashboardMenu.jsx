@@ -14,7 +14,7 @@ const getLearnerHeaderMenu = (
     {
       type: 'item',
       href: '/',
-      content: formatMessage(messages.course),
+      content: 'Mis cursos', //formatMessage(messages.course),
       isActive: true,
     },
     ...(getConfig().ENABLE_PROGRAMS ? [{
@@ -24,8 +24,8 @@ const getLearnerHeaderMenu = (
     }] : []),
     {
       type: 'item',
-      href: `${urls.baseAppUrl(courseSearchUrl)}`,
-      content: formatMessage(messages.discoverNew),
+      href: 'https://cms.atenea.digital/activar-licencias/', //`${urls.baseAppUrl(courseSearchUrl)}`,
+      content: 'Activar licencia', //formatMessage(messages.discoverNew),
       onClick: (e) => {
         exploreCoursesClick(e);
       },

@@ -17,7 +17,7 @@ export const arrowIcon = (<Icon className="mx-1" src={ArrowForward} />);
 export const LookingForChallengeWidget = () => {
   const { formatMessage } = useIntl();
   const { courseSearchUrl } = reduxHooks.usePlatformSettingsData();
-  const hyperlinkDestination = baseAppUrl(courseSearchUrl) || '';
+  const hyperlinkDestination = 'https://cms.atenea.digital/activar-licencias/'//baseAppUrl(courseSearchUrl) || '';
 
   return (
     <Card orientation="horizontal" id="looking-for-challenge-widget">
@@ -36,7 +36,13 @@ export const LookingForChallengeWidget = () => {
             onClick={findCoursesWidgetClicked(hyperlinkDestination)}
             className="d-flex align-items-center"
           >
-            {formatMessage(messages.findCoursesButton, { arrow: arrowIcon })}
+            Activar licencia 
+            <span class="pgn__icon mx-1">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false" aria-hidden="true">
+                <path d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8Z" fill="currentColor"></path>
+              </svg>
+            </span>
+            {/* {formatMessage(messages.findCoursesButton, { arrow: arrowIcon })} */}
           </Hyperlink>
         </h5>
       </Card.Body>
