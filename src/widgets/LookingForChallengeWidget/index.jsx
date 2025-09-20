@@ -17,7 +17,7 @@ export const arrowIcon = (<Icon className="mx-1" src={ArrowForward} />);
 export const LookingForChallengeWidget = () => {
   const { formatMessage } = useIntl();
   const { courseSearchUrl } = reduxHooks.usePlatformSettingsData();
-  const hyperlinkDestination = 'https://cms.atenea.digital/activar-licencias/'//baseAppUrl(courseSearchUrl) || '';
+  const hyperlinkDestination = 'https://cms.atenea.digital/activar-licencias/'  //  baseAppUrl(courseSearchUrl) || '';
 
   return (
     <Card orientation="horizontal" id="looking-for-challenge-widget">
